@@ -3,48 +3,49 @@ let mapaCacos = [];
 let idCacos = [];
 let cacosImg = [];
 let raivaImg;
+let vasoImg;
 let end = false;
 
 ////
+/*
 idCacos = [
   [3, 0, 6],
   [1, 4, 7],
   [2, 5, 8],
 ];
+*/
 
 function preload() {
   for (let i = 0; i < 9; i++) {
     cacosImg[i] = loadImage("imagens/cacos/frag" + i + ".png");
   }
   raivaImg = loadImage("imagens/raiva.png");
+  vasoImg = loadImage("imagens/vaso.png");
 }
 
 function setup() {
   createCanvas(800, 600);
   textAlign(CENTER, CENTER);
 
-  ////let zero = [Math.floor(random() * 3), Math.floor(random() * 3)];
-  let zero = [0, 1]; ////
+  let zero = [Math.floor(random() * 3), Math.floor(random() * 3)];
+  //let zero = [0, 1]; ////
   //console.log(zero);
 
   for (let i = 0; i < 3; i++) {
     mapaCacos[i] = [];
-    ////idCacos[i] = [null, null, null]; // PREENCHE A LINHA PROVISORIAMENTE
+    idCacos[i] = [null, null, null]; // PREENCHE A LINHA PROVISORIAMENTE
     for (let j = 0; j < 3; j++) {
       if (i == zero[0] && j == zero[1]) {
         mapaCacos[i][j] = 0;
-        ////idCacos[i][j] = 0;
+        idCacos[i][j] = 0;
       } else {
         mapaCacos[i][j] = 1;
         let rand;
-        ////
-        /*
         do {
           //rand = floor(random(1, 9));
           rand = 1 + Math.floor(Math.random() * 8); // RANDOM NATIVO COM INTERVALO DE 1 A 9
         } while (acharId(i, rand));
         idCacos[i][j] = rand;
-        */
       }
     }
   }
@@ -54,6 +55,9 @@ function setup() {
 
 function draw() {
   background(0, 0, 30);
+
+  noStroke();
+  image(vasoImg, 0, 0, 100, 100);
 
   noStroke();
   fill(255, 5, 142);
@@ -78,13 +82,7 @@ function draw() {
     image(raivaImg, 10, height / 2 - 150, 300, 300);
     fill(255, 5, 142);
     textSize(25);
-    /*
-    text(
-      "PARABÉNS, VOCÊ CONSEGUIU! \n MAS UM PEDAÇO DO VASO SE PERDEU... \n QUE DROGAAA!!!",
-      width / 2,
-      height / 2 + 220
-    );
-    */
+
     document.getElementById(
       "fimdejogo"
     ).innerHTML = `<p id="parabens" class="pixelify-sans-text">PARABÉNS, VOCÊ CONSEGUIU! MAS UM PEDAÇO DO VASO SE PERDEU... QUE DROGAAA!!!</p>`;
