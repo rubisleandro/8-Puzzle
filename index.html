@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Desafio - O vaso quebrado</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 0, 30);
+      }
+
+      canvas {
+        margin: auto;
+        display: block;
+        padding: 0;
+        border-radius: 20px;
+      }
+
+      p,
+      a {
+        margin: auto;
+        font-size: 18pt;
+        margin: 1% 10%;
+      }
+
+      #parabens {
+        text-align: center;
+      }
+
+      a {
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .pixelify-sans-title {
+        color: rgb(255, 5, 142);
+        font-family: "Pixelify Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .pixelify-sans-text {
+        color: rgb(255, 5, 142);
+        font-family: "Pixelify Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="pixelify-sans-title">DESAFIO - O VASO QUEBRADO</h1>
+      <p class="pixelify-sans-text">
+        Insight esbarrou e acabou derrubando meu querido vaso, e agora tenho que
+        organizar e juntar todos os cacos de volta. Você pode me ajudar?
+      </p>
+    </main>
+    <script src="8-puzzle.js"></script>
+    <div id="fimdejogo"></div>
+  </body>
+</html>
