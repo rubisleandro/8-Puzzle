@@ -87,8 +87,7 @@ function draw() {
     */
     document.getElementById(
       "fimdejogo"
-    ).innerHTML = `<p id="parabens" class="pixelify-sans-text">PARABÉNS, VOCÊ CONSEGUIU! MAS UM PEDAÇO DO VASO SE PERDEU... QUE DROGAAA!!!</p>
-    <a class="pixelify-sans-text" href="">CONTINUAR</a>`;
+    ).innerHTML = `<p id="parabens" class="pixelify-sans-text">PARABÉNS, VOCÊ CONSEGUIU! MAS UM PEDAÇO DO VASO SE PERDEU... QUE DROGAAA!!!</p>`;
     noLoop();
   } else {
     acenderCelula();
